@@ -1,0 +1,12 @@
+{{#if productos }}
+{{#each productos}}
+<div>{{this.title}}</div>
+<div>{{this.price}}</div>
+<img src={{this.thumbnail}} width="50">
+{{/each}}
+{{else}}
+    <P>No hay productos</p>
+    {{/if}}
+<a class="btn btn-success" href="/" role="button">Crear producto</a>
+
+
