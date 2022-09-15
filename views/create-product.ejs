@@ -1,0 +1,41 @@
+<div class="formulario">
+	<form class="form" action="/productos" method="POST" id="productForm'">
+		<legend>CREA UN PRODUCTO</legend>
+		<div class="form-group">
+			<label for="name">NOMBE</label>
+			<input
+				type="text"
+				class="form-control"
+				name="title"
+				id="name"
+				placeholder="Nombre de Producto"
+				required
+			/>
+		</div>
+		<div class="form-group">
+			<label for="precio">PRECIO</label>
+			<input
+				type="text"
+				class="form-control"
+				name="price"
+				id="precio"
+				placeholder="Precio del Producto"
+				required
+			/>
+		</div>
+		<div class="form-group">
+			<label for="thumbnail">THUMBNAIL</label>
+			<input
+				type="thumbnail"
+				class="form-control"
+				name="thumbnail"
+				id="thumbnail"
+				placeholder="url de la Imagen"
+				required
+			/>
+		</div>
+		<div class="form-button">
+			<input type="submit" value="ENVIAR" class="p-1" />
+		</div>
+	</form>
+</div>
