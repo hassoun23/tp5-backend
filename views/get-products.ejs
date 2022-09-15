@@ -1,6 +1,10 @@
-<%= productos.forEach (item => { %>
-
+<%- include('./partials/head.ejs') %> <% if(productos.length>0) {%> <%
+productos.forEach(item => { %>
 <div><%= item.title %></div>
 <div><%= item.price %></div>
-<div><%= item.thumbnail %></div>
-<% }) %>
+<img src="<%= item.thumbnail %>" width="50" />
+<% }) %> <% }else{%>
+<p>No hay productos</p>
+<% } %>
+<a class="btn btn-success" href="/" role="button">Crear producto</a>
+<%- include('./partials/foot.ejs') %>

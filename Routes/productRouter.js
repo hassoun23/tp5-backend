@@ -4,10 +4,9 @@ const router = express.Router();
 const ManagerProduct = require('../manager.js');
 const manager = new ManagerProduct('productos.json');
 
-router.get('/', (req, res) => {
-	const productos = manager.getAll().then((prod) => {
-		res.render('get-products', { productos });
-	});
+router.get('/', async (req, res) => {
+	let pp = await manager.getAll();
+	res.render('get-products', { productos: pp.message });
 });
 
 router.post('/', (req, res) => {
