@@ -1,0 +1,15 @@
+
+html
+includes
+    body 
+        h2 Create a product
+        form(action='/products' method='post')
+            label Title:
+            input(name='title')
+            label Price:
+            input(name='price')
+            label Thumbnail:
+            input(name='thumbnail')
+            input(type='submit')
+        a.btn.btn-success(href='/products') ver todos los productos
+includes  
